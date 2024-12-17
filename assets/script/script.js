@@ -20,3 +20,11 @@ imagens.forEach(img => {
   img.addEventListener("mouseover", (event) => trocarImagem(event, novaImagem));
   img.addEventListener("mouseout", (event) => restaurarImagem(event, imagemOriginal));
 });
+
+// Ligação a API
+
+$.ajax({
+  method: "GET",
+  url: "https://restcountries.com/v3.1/all",
+  data: {name: "Brazil", fullText: true},
+})
