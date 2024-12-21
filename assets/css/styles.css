@@ -23,7 +23,7 @@ nav img{
 .carrousel img{
     width: 462px;
     height: 368px;
-}
+}   
 
 p{
     font-family: outfit, sans-serif;
@@ -67,16 +67,24 @@ h1{
     margin-top: 100px;
 }
 
+
+
+
+/*CSS FOOTER*/
+
+
 footer{
     background-color: #D9D9D9;
-    width: 1440px;
     height: 363px;
-    margin-top: 0px;
+    /*margin-top: 0px;*/
+    color: #283646;
+    
 }
 
 .containerFooter{
-    justify-content: space-between;
-    padding: 30px;
+   justify-content: space-between;
+   text-align: center;
+    padding: 30px; 
 }
 
 .imagemFooter img{
@@ -85,9 +93,8 @@ footer{
 }
 
 .FooterNavbar{
-    margin-left: 525px;
     background-color: #D9D9D9;
-    text-align: center;
+
 }
 
 
@@ -97,6 +104,10 @@ ul {
     justify-content: space-between;
     display: inline-block;
     padding: var(--space-xs); 
+    
   }
   
 
+li {
+    margin: 0 20px 0 20px;
+}
