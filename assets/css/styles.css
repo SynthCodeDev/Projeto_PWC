@@ -37,7 +37,8 @@ h1{
 }
 
 .explora{
-    width: 1442px;
+    width: auto;
+    /*width: 1442px;*/
     height: 441px;
     background-image: url(../img/midtown.png);
     background-color: rgba(0, 0, 0, 50%);
@@ -75,6 +76,7 @@ h1{
 
 footer{
     background-color: #D9D9D9;
+    width: auto;
     height: 363px;
     /*margin-top: 0px;*/
     color: #283646;
@@ -107,7 +109,16 @@ ul {
     
   }
   
+.social a {
+    margin: 0 15px 0 15px;
+}
 
+
+/*NavBar e Footer*/
 li {
     margin: 0 20px 0 20px;
+}
+
+.nav-link {
+    color: black;
 }
