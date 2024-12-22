@@ -23,7 +23,7 @@ nav img{
 .carrousel img{
     width: 462px;
     height: 368px;
-}
+}   
 
 p{
     font-family: outfit, sans-serif;
@@ -37,7 +37,8 @@ h1{
 }
 
 .explora{
-    width: 1442px;
+    width: auto;
+    /*width: 1442px;*/
     height: 441px;
     background-image: url(../img/midtown.png);
     background-color: rgba(0, 0, 0, 50%);
@@ -45,9 +46,18 @@ h1{
     margin-bottom: auto;
 }
 
-.sobreNos img{
+.texto-centro{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.cardsSobreNos img{
     width: 289px;
     height: 265px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
 }
 
 .cardsSobreNos button{
@@ -58,16 +68,25 @@ h1{
     margin-top: 100px;
 }
 
+
+
+
+/*CSS FOOTER*/
+
+
 footer{
     background-color: #D9D9D9;
-    width: 1440px;
+    width: auto;
     height: 363px;
-    margin-top: 0px;
+    /*margin-top: 0px;*/
+    color: #283646;
+    
 }
 
 .containerFooter{
-    justify-content: space-between;
-    padding: 30px;
+   justify-content: space-between;
+   text-align: center;
+    padding: 30px; 
 }
 
 .imagemFooter img{
@@ -76,9 +95,8 @@ footer{
 }
 
 .FooterNavbar{
-    margin-left: 525px;
     background-color: #D9D9D9;
-    text-align: center;
+
 }
 
 
@@ -88,7 +106,22 @@ ul {
     justify-content: space-between;
     display: inline-block;
     padding: var(--space-xs); 
+    
   }
+  
+.social a {
+    margin: 0 15px 0 15px;
+}
+
+
+/*NavBar e Footer*/
+li {
+    margin: 0 20px 0 20px;
+}
+
+.nav-link {
+    color: black;
+}
   
 
 /*css especifico contactos*/

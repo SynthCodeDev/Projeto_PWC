@@ -46,6 +46,15 @@ h1{
     margin-bottom: auto;
 }
 
+.explora_container{
+    background-color: rgba(0, 0, 0, 80%);
+    height: 441px;
+}
+
+.explora button{
+    border-radius: 0%;
+}
+
 .texto-centro{
     margin-top: 100px;
     text-align: center;
