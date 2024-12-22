@@ -25,10 +25,11 @@ nav img{
 }
 
 .carousel img{
+    position: relative;
     width: 462px;
     height: 368px;
     margin-top: 60px;
-    margin-right: auto;
+    margin-left: 60%;
     
     
 }  
@@ -53,10 +54,19 @@ nav img{
 }
 
 .carousel-caption {
+    position: absolute;
+    padding-left: 0;
+    top: 30%;
+    text-align: left;
+    width: 50%;
     padding: auto;
     color: black
 }
 
+.australia{
+    color: white;
+    
+}
 
 p{
     font-family: outfit, sans-serif;
