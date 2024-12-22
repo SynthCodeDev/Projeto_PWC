@@ -41,7 +41,6 @@ h1{
     /*width: 1442px;*/
     height: 441px;
     background-image: url(../img/midtown.png);
-    background-color: rgba(0, 0, 0, 50%);
     color: white;
     margin-bottom: auto;
 }
@@ -53,7 +52,17 @@ h1{
 
 .explora button{
     border-radius: 0%;
+    width: 130px;
+    height: 42px;
 }
+
+.texto-explora{
+    height: auto;
+    width: auto;
+    text-align: justify;
+    padding: 8% 20%;
+}
+
 
 .texto-centro{
     margin-top: 100px;
