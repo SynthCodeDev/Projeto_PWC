@@ -68,6 +68,18 @@ nav img{
 
 }
 
+.australia button{
+    border-radius: 0%;
+    width: 141px;
+    height: 42px;
+}
+
+.japao button{
+    border-radius: 0%;
+    width: 141px;
+    height: 42px;
+}
+
 p{
     font-family: outfit, sans-serif;
     font-size: 16px;
