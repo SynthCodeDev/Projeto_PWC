@@ -107,3 +107,13 @@ li {
     cursor: pointer; /* Torna o ícone clicável */
 }
 
+/*CSS BARRA PESQUISA*/
+
+.barra{
+    width: 30%;
+    padding: 50px;
+}
+
+.barra button{
+    border-radius: 0%;
+} 
