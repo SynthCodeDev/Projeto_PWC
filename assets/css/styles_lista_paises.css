@@ -2,6 +2,7 @@ body{
     text-align: center;
 }
 
+/*CSS NavBar*/
 nav{
     height: 68px;
 }
@@ -42,16 +43,22 @@ h1{
     margin-top: 100px;
 }
 
+/*CSS FOOTER*/
+
+
 footer{
     background-color: #D9D9D9;
-    width: 1440px;
+    width: auto;
     height: 363px;
-    margin-top: 0px;
+    /*margin-top: 0px;*/
+    color: #283646;
+    
 }
 
 .containerFooter{
-    justify-content: space-between;
-    padding: 30px;
+   justify-content: space-between;
+   text-align: center;
+    padding: 30px; 
 }
 
 .imagemFooter img{
@@ -60,11 +67,9 @@ footer{
 }
 
 .FooterNavbar{
-    margin-left: 525px;
     background-color: #D9D9D9;
-    text-align: center;
-}
 
+}
 
 ul {
     list-style: none;
@@ -74,8 +79,15 @@ ul {
     padding: var(--space-xs); 
   }
   
+/*NavBar e Footer*/
+li {
+    margin: 0 20px 0 20px;
+}
 
-/* Contêiner flexível para alinhar botão e ícone */
+.nav-link {
+    color: black;
+}
+
 .d-flex {
     display: flex;
     justify-content: space-between; /* Botão à esquerda, ícone à direita */
@@ -83,7 +95,7 @@ ul {
     width: 100%; /* Garante que os elementos usem toda a largura disponível */
 }
 
-/* Estilo para o botão */
+
 #maisInfo {
     margin: 0 ; /* Remove margens extras */
 }
