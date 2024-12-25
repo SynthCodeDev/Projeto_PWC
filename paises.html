@@ -54,29 +54,26 @@
       </div>
     </nav>
 
+    
+
+    <!-- Lista de Países -->
+
+    <div>
+      <h1 class="titulo">Lista de Países</h1>
+    </div>
+
     <!--Barra de pesquisa-->
-    <div class="input-group mb-3 barra">
+    <div class="input-group mb-3 barra pesquisa">
       <input type="text" id="searchinput" class="form-control" placeholder="Escreva um nome de um pais">
       <button type="button" id="searchbutton" class="btn btn-outline-primary">Pesquisar</button>
     </div>
 
-    <!-- Lista de Países -->
-
-    <section class="my-4">
+    <section>
       <div class="container">
-        <div class="listaPaises">
-          <h1>Lista de Países</h1>
-        </div>
-          <div class="row cardsSobreNos">
-            <div class="card mb-4 col-md-4">
-              <img src="assets/img/avatar1.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Nome Pais API</h5>
-                <p class="card-text">Info do pais fornecido pela API</p>
-                <button type="button" class="btn btn-outline-primary" id="maisInfo" onclick="document.location='detalhes_do_pais.html'">Mais Informações ></button>
-                <img class="favorito" src="assets/img/nao_favorito.png" alt="Favorito">
-              </div>
-            </div>
+        <div id="countrieslist" class="row"></div>
+      </div>
+    </section>
+    
            
     </section>
 
@@ -142,7 +139,9 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/script/script_lista_paises.js"></script>
+    
 
 
 </body>
