@@ -62,6 +62,8 @@ function displayCountries(countriesArray) {
                   <p class="card-text">Capital: ${country.capital ? country.capital[0] : 'N/A'}</p>
                   <p class="card-text">Região: ${country.region}</p>
                   <p class="card-text">População: ${country.population.toLocaleString()}</p>
+                  <button type="button" class="btn btn-outline-primary" id="maisInfo" onclick="document.location='detalhes_do_pais.html'">Detalhes</button>
+                  <img class="favorito" src="assets/img/nao_favorito.png" alt="Favorito">
               </div>
           </div>
       </div>`;
