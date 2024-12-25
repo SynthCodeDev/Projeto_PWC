@@ -200,10 +200,6 @@ ul {
     padding: var(--space-xs); 
     
   }
-  
-.social a {
-    margin: 0 15px 0 15px;
-}
 
 
 /*NavBar e Footer*/
@@ -213,4 +209,8 @@ li {
 
 .nav-link {
     color: black;
+}
+
+.social a {
+    margin: 0 15px 0 15px;
 }

@@ -1,6 +1,29 @@
+/*CSS GERAL*/
+
 body{
     text-align: center;
 }
+
+
+p{
+    font-family: outfit, sans-serif;
+    font-size: 16px;
+}
+
+h1{
+    font-family:outfit, sans-serif;
+    font-size: 56px;
+    font-style: bold;
+}
+
+.titulo{
+    padding: 50px;
+}
+
+.texto{
+    text-align: justify;
+}
+
 
 /*CSS NavBar*/
 nav{
@@ -17,22 +40,15 @@ nav img{
 }
 
 
-p{
-    font-family: outfit, sans-serif;
-    font-size: 16px;
-}
-
-h1{
-    font-family:outfit, sans-serif;
-    font-size: 56px;
-    font-style: bold;
-}
-
-
-.listaPaises img{
+/*CSS SOBRE NOS*/
+.cardsSobreNos img{
     width: 289px;
     height: 265px;
-    padding: 50px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    border-radius: 0;
 }
 
 .cardsSobreNos button{
@@ -42,6 +58,16 @@ h1{
 #texto-centro{
     margin-top: 100px;
 }
+
+.card-sobre{
+    padding: 20px;
+    margin: 10px;
+    width: 335px;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*CSS FOOTER*/
 
@@ -71,14 +97,17 @@ footer{
 
 }
 
+
 ul {
     list-style: none;
     display: center;
     justify-content: space-between;
     display: inline-block;
     padding: var(--space-xs); 
+    
   }
   
+
 /*NavBar e Footer*/
 li {
     margin: 0 20px 0 20px;
@@ -91,33 +120,3 @@ li {
 .social a {
     margin: 0 15px 0 15px;
 }
-
-.d-flex {
-    display: flex;
-    justify-content: space-between; /* Botão à esquerda, ícone à direita */
-    align-items: center; /* Alinhamento vertical central */
-    width: 100%; /* Garante que os elementos usem toda a largura disponível */
-}
-
-
-#maisInfo {
-    margin: 0 ; /* Remove margens extras */
-}
-
-/* Estilo para o ícone */
-.favorito {
-    width: 30px; /* Tamanho do ícone */
-    height: 30px; /* Tamanho do ícone */
-    cursor: pointer; /* Torna o ícone clicável */
-}
-
-/*CSS BARRA PESQUISA*/
-
-.barra{
-    width: 30%;
-    padding: 50px;
-}
-
-.barra button{
-    border-radius: 0%;
-} 
