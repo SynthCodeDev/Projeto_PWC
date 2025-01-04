@@ -94,21 +94,21 @@ li {
 
 .d-flex {
     display: flex;
-    justify-content: space-between; /* Botão à esquerda, ícone à direita */
-    align-items: center; /* Alinhamento vertical central */
-    width: 100%; /* Garante que os elementos usem toda a largura disponível */
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
 }
 
 
 #maisInfo {
-    margin: 0 ; /* Remove margens extras */
+    margin: 0 ; 
 }
 
 /* Estilo para o ícone */
 .favorito {
-    width: 30px; /* Tamanho do ícone */
-    height: 30px; /* Tamanho do ícone */
-    cursor: pointer; /* Torna o ícone clicável */
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer; 
 }
 
 /*CSS BARRA PESQUISA*/
@@ -141,7 +141,7 @@ li {
     
   }
  
-  .card img {
+  .card-img-top {
     max-width: 150px;
     height: auto;
     border-radius: 0px;
