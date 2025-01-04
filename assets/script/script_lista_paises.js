@@ -1,22 +1,23 @@
 var allCountries = []; // Variável para armazenar todos os países
 
+// Busca os países da API
 function fetchCountries() {
     var api_url = "https://restcountries.com/v3.1/all";
 
     $.ajax({
         url: api_url,
         method: "GET",
-        success: function(data) {
-            console.log(data);
+        success: function (data) {
             allCountries = data; // Armazena os países na variável global
             displayCountries(allCountries); // Exibe a lista inicial completa
         },
-        error: function() {
+        error: function () {
             alert("Erro na pesquisa dos países");
         }
     });
 }
 
+// Renderiza os países como cards
 function displayCountries(countriesArray) {
     var countrieslist = $("#countrieslist");
     countrieslist.empty();
@@ -27,7 +28,7 @@ function displayCountries(countriesArray) {
     });
 
     countriesArray.forEach(function (country) {
-        var cardCountry = `<div class="col-md-2 mb-2">
+        var cardCountry = `<div class="col-md-4 mb-4">
             <div class="card h-100">
                 <img src="${country.flags.png}" class="card-img-top" alt="Bandeira de ${country.name.common}">
                 <div class="card-body">
@@ -43,18 +44,74 @@ function displayCountries(countriesArray) {
         countrieslist.append(cardCountry);
     });
 
-    // Adicionar evento de clique para as imagens de favorito
+    atualizarFavoritosUI(); // Atualiza os estados dos favoritos
+
+    // Adiciona evento de clique para as imagens de favorito
     document.querySelectorAll('.favorito').forEach(function (image) {
         image.addEventListener('click', function () {
+            var pais = this.parentElement.querySelector('.card-title').innerText;
+
             if (this.src.includes('nao_favorito.png')) {
-                this.src = this.src.replace('nao_favorito.png', 'favorito.png');
+                this.src = 'assets/img/favorito.png';
+                addFavoritos(pais);
             } else if (this.src.includes('favorito.png')) {
-                this.src = this.src.replace('favorito.png', 'nao_favorito.png');
+                this.src = 'assets/img/nao_favorito.png';
+                removeFavoritos(pais);
             }
         });
     });
 }
 
+// Adiciona um país aos favoritos no localStorage
+function addFavoritos(pais) {
+    var arrayPaisesFavoritos;
+
+    // Verifica se já existem favoritos no localStorage
+    if (localStorage.getItem("paisesFavoritos") === null) {
+        arrayPaisesFavoritos = []; // Se não, cria um array vazio
+    } else {
+        arrayPaisesFavoritos = JSON.parse(localStorage.getItem("paisesFavoritos")); // Caso contrário, recupera a lista de favoritos
+    }
+
+    // Adiciona o país à lista
+    if (!arrayPaisesFavoritos.includes(pais)) {
+        arrayPaisesFavoritos.push(pais);
+    }
+
+    // Salva no localStorage
+    localStorage.setItem("paisesFavoritos", JSON.stringify(arrayPaisesFavoritos));
+}
+
+// Remove um país dos favoritos no localStorage
+function removeFavoritos(pais) {
+    var arrayPaisesFavoritos = JSON.parse(localStorage.getItem("paisesFavoritos"));
+
+    // Remove o país da lista
+    arrayPaisesFavoritos = arrayPaisesFavoritos.filter(function (item) {
+        return item !== pais;
+    });
+
+    // Salva no localStorage
+    localStorage.setItem("paisesFavoritos", JSON.stringify(arrayPaisesFavoritos));
+}
+
+// Atualiza os estados dos favoritos no UI
+function atualizarFavoritosUI() {
+    var arrayFavoritos = JSON.parse(localStorage.getItem("paisesFavoritos")) || [];
+
+    document.querySelectorAll('.favorito').forEach(function (image) {
+        var pais = image.parentElement.querySelector('.card-title').innerText;
+
+        // Configura a imagem corretamente com base nos favoritos
+        if (arrayFavoritos.includes(pais)) {
+            image.src = 'assets/img/favorito.png';
+        } else {
+            image.src = 'assets/img/nao_favorito.png';
+        }
+    });
+}
+
+// Evento ao carregar a página
 $(document).ready(function () {
     fetchCountries();
 
@@ -75,4 +132,31 @@ $(document).ready(function () {
         });
         displayCountries(filteredCountries);
     });
+
+    window.onload = atualizarFavoritosUI; // Atualiza os favoritos ao recarregar a página
 });
+
+
+
+// Função para alterar a imagem no hover
+function trocarImagem(event, novaImagem) {
+    event.target.src = novaImagem;
+  }
+  
+  // Função para restaurar a imagem original
+  function restaurarImagem(event, imagemOriginal) {
+    event.target.src = imagemOriginal;
+  }
+  
+  // Selecionar todas as imagens dentro do UL
+  const imagens = document.querySelectorAll("ul img");
+  
+  // Configurar as imagens de hover e originais
+  imagens.forEach(img => {
+    const imagemOriginal = img.src; // Salva a imagem original
+    const novaImagem = imagemOriginal.replace(".png", "_hover.png"); 
+  
+    // Adiciona os eventos de hover
+    img.addEventListener("mouseover", (event) => trocarImagem(event, novaImagem));
+    img.addEventListener("mouseout", (event) => restaurarImagem(event, imagemOriginal));
+  });
