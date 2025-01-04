@@ -21,18 +21,52 @@ nav img{
 /*Detalhes*/
 
 
-.detalhes {
-
-    padding: 50px;
-}
-
-
-.container img{
+.container-detalhes{ 
     display: flex;
-   
-
+    justify-content: space-between;
+    padding: 50px;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+
+.detalhes {
+    display: inline-block;
+    text-align: left;
+    padding: 50px;
+    
+    
+}
+
+.detalhes h2{
+    text-align: center;
+    padding: 10px;
+}
+
+.detalhes img {
+    height: 150px;
+    width: auto;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 1px;
+    margin-left: 20px;
+       
+}
+
+.mapa{
+    margin-top: 50px;
+    display: inline-block;
+    width: 500px;
+    text-align: right;
+    /*justify-content: space-between;*/
+}
+
+.mapa h3{
+    text-align: center;
+    padding: 10px;
+}
 
 /*CSS FOOTER*/
 
