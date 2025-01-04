@@ -55,7 +55,7 @@ function displayRandomCountries(countriesArray) {
   randomCountries.forEach(country => {
       var cardCountry = `<div class="col-md-4 mb-4">
           <div class="card h-100">
-              <img src="${country.flags.png}" class="card-img-top" alt="Bandeira de ${country.name.common}">
+              <img src="${country.flags.png}" class="card-img-top" alt="Bandeira de ${country.name.common}" onclick="document.location='detalhes_do_pais.html?country=${country.cca3}'">
               <div class="card-body">
                   <h5 class="card-title">${country.name.common}</h5>
               </div>
